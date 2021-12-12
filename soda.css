@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+body{
+    margin: 0;
+    background-image: linear-gradient(to right,#bd5752,black,#2C3E50);
+    height: 100%;
+    background-size: 400% 400%;
+    animation: Gradient 5s ease both;
+    padding: 40px 16px 16px;
+
+}
+ @keyframes Gradient {
+        0% {
+        background-position: 0%;
+        }
+        100%{
+            background-position: 100%;
+        }
+} 
+.main{
+    flex: 1 1 auto;
+}
+.vse{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+/* Основное Описание */
+.tx{
+    color: ivory;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    font-size: 4em;
+    letter-spacing: 2px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 800;
+}
+.fir{
+  text-transform: uppercase;
+  background: linear-gradient(to right, #FF5F6D 40%, #FFC371 60%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent
+}
+
+.two li:nth-child(1){
+    color: orangered;
+}
+.osnova{
+    width: 100%;
+    margin-bottom: 15%;
+}
+/* Описание Анимации Soda */
+
+.container{
+    position: relative;
+    margin-top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 300px;
+    perspective: 500px;  
+    margin-bottom: 15%;  
+}
+.cube{
+    width: inherit;
+    height: inherit;
+    transform-style: preserve-3d;
+    animation: anim 7s linear infinite;
+    animation-delay: 3s;
+}
+.cube:hover{
+    animation-play-state: paused;
+}
+@keyframes anim{
+    0%{
+        transform: rotateY(0deg) ;
+    }
+    100%{
+        transform: rotateY(360deg);
+    }
+}
+.side{
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    text-align: center;
+    color: honeydew;
+    border: 1px solid red; 
+    backface-visibility: hidden; 
+}
+.right{
+    transform: rotateY(90deg) translateZ(150px);
+    width: 100px;
+    background-image: url(soda\ right.jpg);
+}
+.left{
+    transform: rotateY(-90deg) translateZ(50px);
+    width: 100px;
+    background-image: url(soda\ left.jpg);
+}
+.front{
+    transform: translateZ(50px);
+    background-image: url(soda\ front.jpg);
+}
+.back{
+    transform: rotateY(180deg) translateZ(50px);
+    background-image: url(soda\ back.jpg);
+    background-repeat: no-repeat;
+}
+/* Описание */
+
+.png .opis{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 50px;
+}
+.img{
+    display: flex;
+    justify-content: center;
+}
+.footer{
+    background-color: #191919;
+    text-align: center;
+    color: #C84B31;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 2em;
+    font-weight: 800;
+    padding: 10px;
+    box-shadow: 0 0 30px black;
+}
+
+
